@@ -44,9 +44,7 @@ if (isset($_GET['uzytkownik']) && isset($_GET['zamowienie']) && isset($_GET['ksi
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    
     <title>Uzytkownicy</title>
 </head>
 
@@ -56,21 +54,21 @@ if (isset($_GET['uzytkownik']) && isset($_GET['zamowienie']) && isset($_GET['ksi
     <?php include '../nav.php'; ?>
     <!-- end nav -->
 
-    <div class="container col-10">
-        <h1 class="text-center">Tabela wypozyczen</h1>
+    <div class="">
+        <h1 class="">Tabela wypozyczen</h1>
         <?php $results = mysqli_query($connect, "SELECT * FROM zamowienia as z inner join klienci k on z.idklienta = k.idklienta inner join ksiazki b on z.idksiazki = b.idksiazki;"); ?>
         <table class="table mt-4">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Imie i nazwisko</th>
-                    <th scope="col">Miejscowosc</th>
-                    <th scope="col">Imie i nazwisko autora</th>
-                    <th scope="col">Tytul</th>
-                    <th scope="col">Cena</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="">#</th>
+                    <th scope="">Status</th>
+                    <th scope="">Imie i nazwisko</th>
+                    <th scope="">Miejscowosc</th>
+                    <th scope="">Imie i nazwisko autora</th>
+                    <th scope="">Tytul</th>
+                    <th scope="">Cena</th>
+                    <th scope=""></th>
+                    <th scope=""></th>
                 </tr>
             </thead>
             <tbody>
@@ -91,43 +89,43 @@ if (isset($_GET['uzytkownik']) && isset($_GET['zamowienie']) && isset($_GET['ksi
                     <td>
                         <?php echo $row['cena']; ?> </td>
                     <td>
-                        <a class="btn btn-primary" href="http://localhost:8000/php/wypozyczenia.php?uzytkownik=<?php echo $row['idklienta']; ?>&zamowienie=<?php echo $row['idzamowienia']; ?>&ksiazka=<?php echo $row['idksiazki']; ?> ">Edytuj</a>
+                        <a class="" href="http://localhost:8000/php/wypozyczenia.php?uzytkownik=<?php echo $row['idklienta']; ?>&zamowienie=<?php echo $row['idzamowienia']; ?>&ksiazka=<?php echo $row['idksiazki']; ?> ">Edytuj</a>
                     </td>
                     <td>
-                        <a class="btn btn-danger" href="http://localhost:8000/php/wyzpozyczenia.php?del=<?php echo $row['idzamowienia']; ?>">Usuń</a>
+                        <a class="" href="http://localhost:8000/php/wyzpozyczenia.php?del=<?php echo $row['idzamowienia']; ?>">Usuń</a>
                     </td>
                 </tr>
                 <?php } ?>
         </table>
         <form action="../zarzadzanieBilioteka/wypozyczenia.php" method="POST">
-            <div class="form-row justify-content-center">
+            <div class="">
                 <!-- ksiazki -->
                 <!-- wyswietlanie przy edycji -->
                 <?php if ($update == true) : ?>
                 <!-- klienci -->
-                <div class="col-4">
+                <div class="-4">
                     <input type="hidden" name="idKlienta" value="<?php echo $idKlienta; ?>">
-                    <div class="form-group ">
-                        <label class="col-form-label">Imię klienta</label>
-                        <input type="text" class="form-control" name="imieKlienta" placeholder="Imię klienta" value="<?php echo $imie; ?>">
+                    <div class=" ">
+                        <label class="">Imię klienta</label>
+                        <input type="text" class="" name="imieKlienta" placeholder="Imię klienta" value="<?php echo $imie; ?>">
                     </div>
-                    <div class="form-group ">
-                        <label class="col-form-label">Nazwisko klienta</label>
-                        <input type="text" class="form-control" name="nazwiskoKlienta" placeholder="Nazwisko klienta" value="<?php echo $nazwisko; ?>">
+                    <div class=" ">
+                        <label class="">Nazwisko klienta</label>
+                        <input type="text" class="" name="nazwiskoKlienta" placeholder="Nazwisko klienta" value="<?php echo $nazwisko; ?>">
                     </div>
-                    <div class="form-group ">
-                        <label class="col-form-label">Miejscowosc</label>
-                        <input type="text" class="form-control" name="miejscowosc" placeholder="Miejscowosc" value="<?php echo $miejscowosc; ?>">
+                    <div class=" ">
+                        <label class="">Miejscowosc</label>
+                        <input type="text" class="" name="miejscowosc" placeholder="Miejscowosc" value="<?php echo $miejscowosc; ?>">
                     </div>
                 </div>
                 <?php endif ?>
                 <!-- zamowienia -->
-                <div class="col-4">
+                <div class="-4">
                     <input type="hidden" name="idZamowienia" value="<?php echo $idZamowienia; ?>">
                     <?php if ($idZamowienia != 0) : ?>
-                    <div class="form-group">
-                        <label class="col-form-label">Nr zamowienia</label>
-                        <input type="text" readonly class="form-control-plaintext" name="idzamowienia" placeholder="Nr zamowienia" value="<?php echo $idZamowienia; ?>">
+                    <div class="">
+                        <label class="">Nr zamowienia</label>
+                        <input type="text" readonly class="-plaintext" name="idzamowienia" placeholder="Nr zamowienia" value="<?php echo $idZamowienia; ?>">
                     </div>
                     <?php endif ?>
                     <!-- wybor klienta do zamowienia -->
@@ -152,12 +150,12 @@ if (isset($_GET['uzytkownik']) && isset($_GET['zamowienie']) && isset($_GET['ksi
                             </select>
                     </div>
                     <?php endif ?>
-                    <div class="form-group ">
-                        <label class="col-form-label">Data zamowienia</label>
-                        <input type="text" readonly class="form-control" name="dataZamowienia" placeholder="Data zamowienia" value="<?php echo $dataZamowienia; ?>">
+                    <div class=" ">
+                        <label class="">Data zamowienia</label>
+                        <input type="text" readonly class="" name="dataZamowienia" placeholder="Data zamowienia" value="<?php echo $dataZamowienia; ?>">
                     </div>
-                    <div class="form-grup">
-                        <label class="col-form-label">Status zamówienia</label>
+                    <div class="">
+                        <label class="">Status zamówienia</label>
                         <select name="statusZamowienia" class="custom-select">
                             <option value="Oczekiwanie">Oczekiwanie</option>
                             <option value="Wysłano">Wysłano</option>
@@ -169,10 +167,10 @@ if (isset($_GET['uzytkownik']) && isset($_GET['zamowienie']) && isset($_GET['ksi
             </div>
             <!-- wyswietlanie ksaizek przy edycji -->
             <?php if ($update == true) : ?>
-            <div class="form-row justify-content-around">
-                <div class="form-group col-8">
+            <div class="">
+                <div class=" ">
                     <?php $results = mysqli_query($connect, "SELECT * FROM ksiazki;"); ?>
-                    <select name="wybranaKsiazka" class="custom-select">
+                    <select name="wybranaKsiazka" class="">
                             <option value="<?php echo $idKsiazki ; ?>" selected><?php echo $tytul; ?></option>
                             <?php while ($row = mysqli_fetch_array($results)) { ?>
                                 <option value="<?php echo $row['idksiazki']; ?>"><?php echo $row['tytul']; ?></option>
@@ -184,9 +182,9 @@ if (isset($_GET['uzytkownik']) && isset($_GET['zamowienie']) && isset($_GET['ksi
 
             <div class="mt-3 mb-5">
                 <?php if ($update == true) : ?>
-                <button class="btn btn-primary col-2 offset-5" type="submit" name="update">Edytuj</button>
+                <button class="" type="submit" name="update">Edytuj</button>
                 <?php else : ?>
-                <button class="btn btn-primary col-2 offset-5" type="submit" name="save">Dodaj</button>
+                <button class="" type="submit" name="save">Dodaj</button>
                 <?php endif ?>
             </div>
         </form>

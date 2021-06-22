@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
     <title>Biblioteka</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
@@ -15,45 +15,45 @@
 <body>
 
     <!-- nav -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="text-primary navbar-brand" href="#">Aplikacja Biblioteka</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+    <nav class="">
+        <a class="" href="#">Aplikacja Biblioteka</a>
+        <button class="" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=""></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-md-center" id="navbarNavAltMarkup">
+        <div class="" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a  class="p-3 mb-2 bg-dark text-white nav-item nav-link active" href="#">Panel administratora <span class="sr-only">(current)</span></a>
-                <a class="nav-item nav-link" href="#">Panel edycji</a>
-                <a class="nav-item nav-link" href="#">Dodaj nową</a>
-                <a class="nav-item nav-link" href="#">Logowanie</a>
+                <a  class="" href="#">Panel administratora <span class="sr-only">(current)</span></a>
+                <a class="" href="#">Panel edycji</a>
+                <a class="" href="#">Dodaj nową</a>
+                <a class="" href="#">Logowanie</a>
             </div>
         </div>
     </nav>
     <!-- end nav -->
 
     <!-- Dodawanie-->
-    <div class="container">
+    <div class="">
         <form action="Baza/dodawanie.php" method="POST">
-            <div class="form-group mb-3 col-4 offset-4">
-                <label class="col-form-label">Tytuł książki</label>
-                <input type="text" class="form-control" name="artTitle" placeholder="Tytuł książki">
+            <div class="">
+                <label class="">Tytuł książki</label>
+                <input type="text" class="" name="artTitle" placeholder="Tytuł książki">
 
             </div>
-            <div class="form-group mb-3 col-4 offset-4">
-                <label class="col-form-label">Link do grafiki</label>
-                <input type="text" class="form-control" name="artImg" placeholder="Link do grafiki">
+            <div class="">
+                <label class="">Link do grafiki</label>
+                <input type="text" class="" name="artImg" placeholder="Link do grafiki">
             </div>
-            <div class="form-group mb-3 col-4 offset-4">
-                <label class="col-form-label">Tresc</label>
-                <textarea class="form-control" name="artContent" placeholder="Treść" rows="3"></textarea>
+            <div class="">
+                <label class="">Tresc</label>
+                <textarea class="" name="artContent" placeholder="Treść" rows="3"></textarea>
             </div>
-            <div class="mb-5">
+            <div class="">
                 <button type="submit" class="btn btn-primary col-2 offset-5">Wyslij</button>
             </div>
         </form>
     </div>
     <!-- koniec forma dodawania -->
-    <div class="container mt-5 mb-5 col-6 offset-5">
+    <div class="">
             <?php include 'Baza/wyswietlanie2.php'; ?>
     </div>
 
